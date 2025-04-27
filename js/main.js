@@ -45,20 +45,19 @@ Object.keys(sections).forEach(clickId => {
 // 
 
 let arrow = document.getElementById("arrow");
-let selfDefinition = document.querySelector(".selfDefinition");
-
-window.onscroll = () => {
-  let linksPosition = selfDefinition.getBoundingClientRect().top + window.scrollY;
-  if (window.scrollY >= linksPosition) {
-    arrow.style.display = "block";
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) { 
+    arrow.classList.add("showArr");
+    arrow.classList.remove("hide");
   } else {
-    arrow.style.display = "none";
+    arrow.classList.remove("showArr");
+    arrow.classList.add("hide");
   }
-};
-arrow.onclick = () => {
+});
+
+arrow.addEventListener("click", () => {
   window.scrollTo({
-    top: links.getBoundingClientRect().top + window.scrollY - offset,
+    top: 0,
     behavior: "smooth"
   });
-};
-
+});
