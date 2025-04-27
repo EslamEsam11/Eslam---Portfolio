@@ -46,7 +46,7 @@ Object.keys(sections).forEach(clickId => {
 let links = document.getElementById("links");
 let arrow = document.getElementById("arrow");
 
-let offset = 80; 
+let offset = top; 
 window.onscroll = () => {
   let linksPosition = links.getBoundingClientRect().top + window.scrollY;
   if (window.scrollY >= linksPosition - offset) {
