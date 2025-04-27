@@ -43,12 +43,12 @@ Object.keys(sections).forEach(clickId => {
 });
 
 // 
-let links = document.getElementById("links");
-let arrow = document.getElementById("arrow");
 
-let offset = top; 
+let arrow = document.getElementById("arrow");
+let selfDefinition = document.querySelector(".selfDefinition");
+
 window.onscroll = () => {
-  let linksPosition = links.getBoundingClientRect().top + window.scrollY;
+  let linksPosition = selfDefinition.getBoundingClientRect().top + window.scrollY;
   if (window.scrollY >= linksPosition) {
     arrow.style.display = "block";
   } else {
