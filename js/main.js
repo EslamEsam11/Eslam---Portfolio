@@ -46,7 +46,7 @@ Object.keys(sections).forEach(clickId => {
 
 let arrow = document.getElementById("arrow");
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) { 
+  if (window.scrollY > 100) { 
     arrow.classList.add("showArr");
     arrow.classList.remove("hide");
   } else {
