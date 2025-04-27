@@ -44,22 +44,42 @@ li {
 /* .boxProjectsDark {
   background: #121212;
 } */
- #arrow {
-  display: none;
- }
- .arrow {
+.showArr {
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: 8px;
+  z-index: 1000;
   padding: 10px;
+  width: 41px;
+  height: 46px;
   background: #45a2f1;
   color: white;
-  border-radius: 26%;
+  border-radius: 8%;
   margin: 10px;
   text-align: center;
   cursor: pointer;
-  z-index: 2;
- }
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+#arrow.showArr {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#arrow.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(20px);
+  margin-top: -24px;
+}
+
 /*header  */
 header {
   height: 60px;
