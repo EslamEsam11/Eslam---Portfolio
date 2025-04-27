@@ -49,7 +49,7 @@ let arrow = document.getElementById("arrow");
 let offset = top; 
 window.onscroll = () => {
   let linksPosition = links.getBoundingClientRect().top + window.scrollY;
-  if (window.scrollY >= linksPosition - offset) {
+  if (window.scrollY >= linksPosition) {
     arrow.style.display = "block";
   } else {
     arrow.style.display = "none";
