@@ -54,7 +54,6 @@ window.addEventListener("scroll", () => {
     arrow.classList.add("hide");
   }
 });
-
 arrow.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
