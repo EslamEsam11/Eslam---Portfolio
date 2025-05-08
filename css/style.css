@@ -235,7 +235,7 @@ header .container {
 }
 /* resume */
 .titleResume h2 {
-  width: 70%;
+  width: auto;
 }
 .titleResume p {
   font-size: 14px;
